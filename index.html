@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ASIEMSec</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--gradA:#3DD5F3;--gradB:#3D5AF3;--txt:#0f172a;--muted:#64748b;}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
+    body{background:#fff;color:var(--txt);}
+    .navbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #e2e8f0;background:rgba(255,255,255,.85);}
+    .btn{background:linear-gradient(135deg,var(--gradA) 0%,var(--gradB) 100%);color:#fff;border:none;padding:.65rem 1.3rem;border-radius:.55rem;font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(61,90,243,.35);transition:transform .2s,box-shadow .2s;}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(61,90,243,.45);}
+    .hero{text-align:center;padding:5rem 1rem 3.5rem;}
+    .hero h2{font-size:1.9rem;color:var(--gradB);margin-top:.15rem;}
+    .hero p{max-width:60ch;margin:1rem auto 0;color:var(--muted);}
+    .features{padding:2rem 1rem 4rem;}
+    .features h2{text-align:center;font-size:2.4rem;font-weight:700;margin-bottom:2rem;}
+    .cards{display:flex;flex-direction:column;gap:2rem;max-width:800px;margin:0 auto;}
+    .card{display:flex;gap:1.6rem;background:#fff;padding:2.3rem;border-radius:1.25rem;backdrop-filter:blur(12px) saturate(150%);border:1px solid rgba(61,90,243,.15);box-shadow:0 8px 24px rgba(61,90,243,.1);transition:box-shadow .25s,transform .25s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(61,90,243,.18);}
+    .card svg{width:60px;height:60px;padding:15px;background:linear-gradient(135deg,var(--gradA) 0%,var(--gradB) 100%);color:#fff;border-radius:1rem;box-shadow:0 6px 20px rgba(61,90,243,.35);transition:transform .25s;}
+    .card svg:hover{transform:translateY(-3px) scale(1.07);}
+    .card h3{font-size:1.3rem;margin-bottom:.5rem;}
+    .card p{font-size:1rem;color:var(--muted);}
+    .cta{text-align:center;padding:4rem 1rem;}
+    .cta input{padding:.8rem 1rem;border:1px solid #cbd5e1;border-radius:.55rem;min-width:240px;margin-right:.7rem;}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div><img src="logo_nav.png" alt="ASIEMSec" style="height:40px;object-fit:contain"></div>
+    <a href="#cta" class="btn">Contact Us</a>
+  </header>
+
+  <section class="hero">
+    <img src="logo_nav.png" alt="ASIEMSec" style="width:300px;object-fit:contain;margin-bottom:0.5rem">
+    <h2>Slash SIEM vendor lock-in</h2>
+    <p>Only 8% of your logs are relevant<br><br>Slashing SIEM noise, cost, and complexity while reducing SIEM dependency</p>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Key Capabilities</h2>
+    <div class="cards">
+
+      <!-- Card 1 with icon originally from old card 2 -->
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/><polyline points="8 22 4 18 8 14"/>
+        </svg>
+        <div>
+          <h3>SIEM Cost Reduction</h3>
+          <p>Reduce log ingestion volumes by up to 80%</p>
+        </div>
+      </div>
+
+      <!-- Card 2 with eye icon (from old card 3) -->
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M1.5 12c2.5-4.5 6.1-7 10.5-7s8 2.5 10.5 7c-2.5 4.5-6.1 7-10.5 7s-8-2.5-10.5-7z"/>
+        </svg>
+        <div>
+          <h3>Continuous Visibility Gap Assessment</h3>
+          <p>Ensure complete visibility, eliminate blind spots in your environment</p>
+        </div>
+      </div>
+
+      <!-- Card 3 with arrow icon (from old card 1) -->
+      <div class="card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5 17 3 12 5 7"/><polyline points="19 17 21 12 19 7"/><line x1="12" y1="17" x2="12" y2="7"/><polyline points="7 12 12 7 17 12"/>
+        </svg>
+        <div>
+          <h3>Quickly add new use cases to your SIEM</h3>
+          <p>Automatically add new data sources, detections, and dashboards</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="email" id="emailField" placeholder="Company email" required>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <div id="statusBox" style="margin-top:.8rem;font-size:.9rem;color:var(--muted);"></div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){emailjs.init('fBnddVm4R97QCx_0o');})();
+    const form=document.getElementById('contactForm');
+    const emailField=document.getElementById('emailField');
+    const statusBox=document.getElementById('statusBox');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const userEmail=emailField.value.trim();
+      if(!userEmail){return;}
+      statusBox.textContent='Sending...';
+      emailjs.send('service_3tw311b','template_pii94qd',{
+        to_name:'Jonatan',
+        from_email:userEmail,
+        message:`Hi Jonatan,\n${userEmail} has left his detail at ASIEMSec`
+      }).then(()=>{statusBox.textContent='Sent! Thank you.';form.reset();})
+        .catch(()=>{statusBox.textContent='Could not send. Please try again.';});
+    });
+  </script>
+</body>
+</html>
